@@ -1,0 +1,125 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#omdb-api {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .main-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #303030;
+        overflow: hidden;
+
+        .box-content {
+            width: auto;
+            height: 100%;
+            position: relative;
+            padding: 0 10%;
+
+            .search-content {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                padding: 2.5% 0;
+
+                input {
+                    width: 50%;
+                    padding: 15px 25px;
+                    border-radius: 50px;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            .content {
+                width: auto;
+                height: 75%;
+                padding: 5px 10px;
+                position: relative;
+
+                .wrapper-content {
+                    height: 100%;
+                    width: 100%;
+                    overflow-y: scroll;
+                    visibility: visible;
+                    display: grid;
+                    grid-template-columns: 25% 25% 25% 25%;
+
+                    .list-content {
+                        width: 100%;
+                        height: 400px;
+                        position: relative;
+                        background-color: rgba(0, 0, 0, 0.75);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+
+                        .wrapper-list {
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.25);
+                            position: relative;
+
+                            .wrapper-desc-list {
+                                width: 100%;
+                                height: auto;
+                                background-color: rgba(25,25,25,0.25);
+                                position: absolute;
+                                bottom: 0;
+                                
+                                .wrapper {
+                                    width: auto;
+                                    height: auto;
+                                    padding:  5%;
+                                    display: flex;
+                                    color: #fff;
+                                    flex-direction: column;
+
+                                    h4 {
+                                        margin: 0;
+                                        margin-bottom: 5px;
+                                        font-size: 16px;
+                                        text-shadow: 3px 3px 5px rgba(25, 25, 25, 0.75);
+                                    }
+
+                                    .type-movie {
+                                        font-size: 10px;
+                                        text-transform: uppercase;
+                                        margin-bottom: 5px;
+                                        text-shadow: 3px 3px 5px rgba(25, 25, 25, 0.75);
+                                    }
+
+                                    .year-movie {
+                                        font-size: 14px;
+                                        text-shadow: 3px 3px 5px rgba(25, 25, 25, 0.75);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.5); 
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
